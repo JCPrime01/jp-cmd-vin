@@ -14,7 +14,7 @@ export default async function handler(req, res) {
       '66.220.', '69.63.', '69.171.', '173.252.',                                                                                                                                        
       '31.13.', '157.240.', '179.60.', '204.15.'
     ];                                                                                                                                                                                     
-   
+  
     const isBot = botUAs.some(b => ua.includes(b));                                                                                                                                        
     const isMeta = metaIPs.some(r => ip.startsWith(r));                                                                                                                                  
                                                                                                                                                                                            
@@ -25,15 +25,15 @@ export default async function handler(req, res) {
     }
                                                                                                                                                                                            
     const links = [                                                                                                                                                                      
-      'https://chat.whatsapp.com/LqyLlE7SyyvKXGqgTsSDLN', // 407
-      'https://chat.whatsapp.com/CRBsfmAG9WX28EUeZGtYMQ', // 417
-      'https://chat.whatsapp.com/GA6W9HISwOb13B1TeMdiG3',  // 421                                                                                                                          
-      'https://chat.whatsapp.com/Iu9nBEyGbUsKVLSVTSkb2i',  // 422                                                                                                                          
-      'https://chat.whatsapp.com/J7dBedpcmIW4z3SBHZq3aB',  // 423                                                                                                                          
+      'https://chat.whatsapp.com/KeJ1meRXOCDJduORhbFkc0',       // 202
+      'https://chat.whatsapp.com/GrjJ74h1p8Q1hp5dddudW4',       // 205                                                                                                                     
+      'https://chat.whatsapp.com/Bbo5D3rsRsuKAIDTRoUzv3?mode=wwt', // 206
+      'https://chat.whatsapp.com/C6DW6qAHOVtKLdnikwzXOd?mode=wwt', // 207                                                                                                                  
+      'https://chat.whatsapp.com/JrBMdPMT3lU6Jxjqjo0xwN',       // 208                                                                                                                     
     ];                                                                                                                                                                                     
                                                                                                                                                                                            
     const link = links[Math.floor(Math.random() * links.length)];                                                                                                                          
-   
-    res.writeHead(302, { Location: link });                                                                                                                                                
-    res.end();                                                                                                                                                                           
+                                                                                                                                                                                         
+    res.writeHead(302, { Location: link });
+    res.end();
   }
